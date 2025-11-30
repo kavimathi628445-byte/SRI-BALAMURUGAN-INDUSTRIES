@@ -1,6 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+/* ---- GLOBAL RESPONSIVE SETTINGS ---- */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .header-left {
+        flex-direction: column;
+    }
+
+    .header-left img {
+        width: 70px;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .header-info {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+/* Navbar Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 12px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+}
+
+/* Start Image Responsive */
+@media (max-width: 768px) {
+    #start-image img {
+        width: 90% !important;
+    }
+}
+
+/* 3 Column Slider Responsive */
+@media (max-width: 768px) {
+    .col-slider {
+        width: 45% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .col-slider {
+        width: 90% !important;
+    }
+}
+
+/* About Cards Responsive */
+@media (max-width: 768px) {
+    .info-card {
+        width: 90% !important;
+    }
+}
+
+/* Product Images Responsive */
+@media (max-width: 768px) {
+    .image-container img {
+        width: 90% !important;
+    }
+}
+</style>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sri Balamurugan Industries</title>
