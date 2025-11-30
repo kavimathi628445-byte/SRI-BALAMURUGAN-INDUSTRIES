@@ -232,23 +232,29 @@
             Contact Us
         </h3>
 
-        <!-- Send Message Form -->
-        <form id="messageForm" onsubmit="sendMessage(event)">
+        <!-- Web3Forms Form -->
+        <form id="messageForm" method="POST" action="https://api.web3forms.com/submit" onsubmit="return sendMessage(event)">
+            
+            <!-- Your Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="f2f65a14-a719-463d-b7d0-a26aaf5e8637">
 
-            <label>Your Name</label>
-            <input type="text" id="name" required
+            <!-- Email Where You Want Messages -->
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+            <label>Name</label>
+            <input type="text" name="name" id="name" required
                 style="width:100%; padding:10px; margin:5px 0 10px; border-radius:6px; border:1px solid #bbb;">
 
-            <label>Your Email</label>
-            <input type="email" id="email" required
+            <label>Email</label>
+            <input type="email" name="email" id="email" required
                 style="width:100%; padding:10px; margin:5px 0 10px; border-radius:6px; border:1px solid #bbb;">
 
-            <label>Your Mobile Number</label>
-            <input type="tel" id="mobile" required maxlength="10"
+            <label>Mobile Number</label>
+            <input type="tel" name="mobile" id="mobile" required maxlength="10"
                 style="width:100%; padding:10px; margin:5px 0 10px; border-radius:6px; border:1px solid #bbb;">
 
-            <label>Your Message</label>
-            <textarea id="message" required
+            <label>Message</label>
+            <textarea name="message" id="message" required
                 style="width:100%; padding:10px; height:80px; margin:5px 0; border-radius:6px; border:1px solid #bbb;"></textarea>
 
             <button type="submit" style="
@@ -288,31 +294,19 @@ function closeContact() {
 }
 
 function sendMessage(event) {
-    event.preventDefault();
-
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
     let mobile = document.getElementById("mobile").value;
-    let msg  = document.getElementById("message").value;
-
-    if (name.trim() === "" || email.trim() === "" || 
-        mobile.trim() === "" || msg.trim() === "") {
-        alert("Please fill all fields.");
-        return;
-    }
 
     if (mobile.length !== 10 || isNaN(mobile)) {
-        alert("9941356190.");
-        return;
+        alert("7299623003");
+        event.preventDefault();
+        return false;
     }
 
-    alert("Thank you " + name + "! Your message has been sent successfully.");
-    document.getElementById("messageForm").reset();
-    closeContact();
+    alert("Sending your message...");
+    return true; // Allow Web3Forms to submit the form
 }
 </script>
 
-</script>
 
 <!-- Start Page Image Only -->
 <div id="start-image" style="
@@ -731,7 +725,7 @@ Shaft alignment.</p>
     <a href="https://www.youtube.com/@SBIBACKUP2025/videos" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
     </a>
-    <a href="https://wa.me/919445411672" target="_blank">
+    <a href="https://wa.me/917299623003" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
     </a>
 </div>
