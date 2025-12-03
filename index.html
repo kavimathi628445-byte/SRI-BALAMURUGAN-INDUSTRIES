@@ -322,8 +322,8 @@ img {
             <!-- Your Web3Forms Access Key -->
             <input type="hidden" name="access_key" value="f2f65a14-a719-463d-b7d0-a26aaf5e8637">
 
-            <!-- Email Where You Want Messages -->
-            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+            <!-- SUCCESS → REDIRECT TO HOME PAGE -->
+            <input type="hidden" name="redirect" value="index.html">
 
             <label>Name</label>
             <input type="text" name="name" id="name" required
@@ -339,40 +339,27 @@ img {
 
             <label>Message</label>
             <textarea name="message" id="message" required
-                style="width:100%; padding:10px; height:80px; margin:5px 0; border-radius:6px; border:1px solid #bbb;"></textarea>
+                style="width:100%; padding:10px; height:80px; margin:5px 0; border-radius:6px; border:1px solid:#bbb;"></textarea>
 
             <div style="text-align:center; width:100%;">
-
-<button type="submit" style="
-    background:#1b04ee; 
-    color:white; 
-    padding:12px 25px;
-    border:none; 
-    border-radius:8px; 
-    cursor:pointer;
-    font-size:16px;
-    display:inline-block;
-    text-align:center;
-">
-    Submit Now
-</button>
-
-</div>
-
-
-        
-
-        <a href="mailto:sri.balamurgan.ind@gmail.com" style="
-            
-        ">
-            
-        </a>
+                <button type="submit" style="
+                    background:#1b04ee; 
+                    color:white; 
+                    padding:12px 25px;
+                    border:none; 
+                    border-radius:8px; 
+                    cursor:pointer;
+                    font-size:16px;
+                ">
+                    Submit Now
+                </button>
+            </div>
+        </form>
 
     </div>
 </div>
 
 <style>
-    
 @keyframes popupAnim {
     0%   { transform:scale(0.7); opacity:0; }
     100% { transform:scale(1); opacity:1; }
@@ -392,13 +379,13 @@ function sendMessage(event) {
     let mobile = document.getElementById("mobile").value;
 
     if (mobile.length !== 10 || isNaN(mobile)) {
-        alert("9941356190");
+        alert("Enter a valid 10-digit mobile number.");
         event.preventDefault();
         return false;
     }
 
     alert("Sending your message...");
-    return true; // Allow Web3Forms to submit the form
+    return true; // form submits to Web3Forms
 }
 </script>
 
@@ -929,4 +916,5 @@ style="
     </div>
 
 </body>
+
 </html>
